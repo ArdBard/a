@@ -1,7 +1,9 @@
 (async () => {
   const res = await fetch(`/`);
   const html = await res.text();
-  
+  const me = document.currentScript;
+  const text = document.createTextNode("6C6/8");
+  me.replaceWith(text);
   
   const found =
     /Jméno:<\/label>\s*<div class="col-sm-9">\s*<p class="form-control-static">\s*Ing\. Radim Kostelník\s*<\/p>/s.test(
